@@ -1,0 +1,7 @@
+<div class="container">
+	<h2><%= @task.title %></h2>
+	<p class="alert alert-secondary"><%= @task.details %></p>
+
+	<p><%= link_to 'Update', edit_task_path, class: 'btn btn-primary' %></p>
+	<p><%= link_to 'Back to the list', tasks_path, class: 'btn btn-light' %></p>
+</div>
