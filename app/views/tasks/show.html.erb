@@ -1,7 +1,11 @@
 <div class="container">
 	<h2><%= @task.title %></h2>
 	<p class="alert alert-secondary"><%= @task.details %></p>
-
+	<% if @task.completed %>
+		<p><i class="fas fa-flag-checkered"></i> This task has been completed!</p>
+	<% else %>
+		<p>This task has not been completed yet...</p>	
+	<% end %>
 	<p><%= link_to 'Update', edit_task_path, class: 'btn btn-primary' %></p>
 	<p><%= link_to 'Back to the list', tasks_path, class: 'btn btn-light' %></p>
 </div>
